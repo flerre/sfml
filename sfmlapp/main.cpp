@@ -8,7 +8,7 @@ int main()
     int mousey=0;
         
         // drawing the window
-    sf::RenderWindow window(sf::VideoMode(1024, 768), "Button");
+    sf::RenderWindow window(sf::VideoMode(1024, 768), "SFML works!");
     
         // drawing the circle and setting position/color
     sf::CircleShape shape(100.f);
@@ -21,6 +21,7 @@ int main()
     if (!texture.loadFromFile("image.png"))
     {
     }
+    sprite.setPosition(512, 384);
     sprite.setTexture(texture);
 
         // drawing text
@@ -33,7 +34,7 @@ int main()
     text.setFont(font);
     text.setString("Hello world");
     text.setPosition(200,300);
-    text.setFillColor(sf::Color::Red);
+    //text.setFillColor(sf::Color::Red);
     text.setCharacterSize(24);
     text.setStyle(sf::Text::Bold | sf::Text::Underlined);
     
@@ -46,6 +47,14 @@ int main()
     button->setPosition(800, 500);
     gui.add(button);
     
+    tgui::Button::Ptr newButton = tgui::Button::copy(button);
+    newButton->setPosition(800, 450);
+    gui.add(newButton);
+    
+    tgui::Button::Ptr newButton2 = tgui::Button::copy(button);
+    newButton2->setPosition(800, 400);
+    gui.add(newButton2);
+        
     tgui::EditBox::Ptr editBox = tgui::EditBox::create();
     gui.add(editBox, "MyWidgetName");
 
