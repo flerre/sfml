@@ -1,0 +1,22 @@
+ladda ner tgui
+
+får en textbox att fungera
+
+
+
+
+variables
+-str
+-armor(AC)
+-hp
+-
+
+
+
+you roll 4 six sided dices (1d6, 2d6, 3d6 and 4d6)
+
+you subract one six sided die (1d6)
+
+you now have three six sided dices (2d6, 3d6 and 4d6)
+
+
